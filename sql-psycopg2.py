@@ -15,3 +15,7 @@ results = cursor.fetchall()
 # close the connection
 connection.close()
 
+# print results
+for result in results:
+    print(result)
+
