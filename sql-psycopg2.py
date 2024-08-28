@@ -9,3 +9,9 @@ cursor = connection.cursor()
 # fetch results (multiple)
 results = cursor.fetchall()
 
+# fetch results (single)
+# results = cursor.fetchone()
+
+# close the connection
+connection.close()
+
