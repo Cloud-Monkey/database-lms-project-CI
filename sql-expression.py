@@ -6,3 +6,11 @@ from sqlalchemy import (
 db = create_engine("postgresql:///chinook")
 
 meta = MetaData(db)
+
+# create variable for artist table
+artist_table = Table (
+    "Artist", meta,
+)
+
+# making the connection
+with db.connect() as connection:
