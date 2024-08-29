@@ -16,7 +16,10 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s ', ["Queen"])
 
 # query 4 - select "ArtistId" 51 from the "Artist" table
-cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s ', [51])
+# cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s ', [51])
+
+# query 5 - select "ArtistId" 51 from the "Artist" table
+
 
 # fetch results (multiple)
 # results = cursor.fetchall()
