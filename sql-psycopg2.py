@@ -19,13 +19,13 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s ', [51])
 
 # query 5 - select "ArtistId" 51 from the "Artist" table
-
+cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s ', [51])
 
 # fetch results (multiple)
-# results = cursor.fetchall()
+results = cursor.fetchall()
 
 # fetch results (single)
-results = cursor.fetchone()
+# results = cursor.fetchone()
 
 # close the connection
 connection.close()
