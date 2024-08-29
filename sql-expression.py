@@ -38,3 +38,9 @@ track_table = Table (
 
 # making the connection
 with db.connect() as connection:
+    # query 1 - select all records from the "Artist" table
+    select_query = artist_table.select()
+
+    results = connection.execute(select_query)
+    for result in results:
+        print(result)
