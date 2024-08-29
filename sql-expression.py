@@ -4,3 +4,5 @@ from sqlalchemy import (
 
 # executing the instructions for our localhost "chinook" db
 db = create_engine("postgresql:///chinook")
+
+meta = MetaData(db)
