@@ -18,7 +18,8 @@ artist_table = Table (
 album_table = Table (
     "Name", meta,
     Column("AlbumId", Integer, primary_key=True),
-    Column("Title", String)
+    Column("Title", String),
+    Column("ArtistId", Integer, ForeignKey("artist_table.ArtistId"))
 )
 
 # making the connection
