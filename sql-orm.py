@@ -21,6 +21,9 @@ class Album(base):
     Title = Column(String)
     ArtistId = Column(Integer, ForeignKey("Artist.ArtistId"))
 
+# create a class based model for the track table
+
+
 # instead of connecting to the database directly, we will ask for a session
 # create a new instance of sessionmaker, then point to our engine (the db)
 Session = sessionmaker(db)
