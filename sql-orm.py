@@ -57,13 +57,17 @@ base.metadata.create_all(db)
 #     print(artist.Name)
 
 # query 3 - select "Queen" "Name" from the "Artist" table
-
+# artist = session.query(Artist).filter_by(Name="Queen").first()
+# print(artist.ArtistId, artist.Name, sep=" | ")
 
 # query 4 - select "ArtistId" 51 from the "Artist" table
-
+# artist = session.query(Artist).filter_by(ArtistId=51).first()
+# print(artist.ArtistId, artist.Name, sep=" | ")
 
 # query 5 - select "ArtistId" 51 from the "Album" table
-
+# albums = session.query(Album).filter_by(ArtistId=51)
+# for album in albums:
+#     print(album.AlbumId, album.Title, album.ArtistId, sep=" | ")
 
 # query 6 - select all records where the composer is "Queen" from the "Tracks" table
 tracks = session.query(Track).filter_by(Composer="Queen")
