@@ -46,4 +46,24 @@ session = Session()
 # creating the database using declarative_base subclass
 base.metadata.create_all(db)
 
+# query 1 - select all records from the "Artist" table
 
+
+
+# query 2 - select "name" records from the "Artist" table
+
+
+
+# query 3 - select "Queen" "Name" from the "Artist" table
+
+
+
+# query 4 - select "ArtistId" 51 from the "Artist" table
+
+
+
+# query 5 - select "ArtistId" 51 from the "Album" table
+
+
+
+# query 6 - select all records where the composer is "Queen" from the "Tracks" table
