@@ -6,3 +6,6 @@ from sqlalchemy.orm import sessionmaker
 
 # executing instructions from the chinook database
 db = create_engine("postgresql:///chinook")
+base = declarative_base()
+
+#
