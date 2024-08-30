@@ -42,7 +42,10 @@ with db.connect() as connection:
     # select_query = artist_table.select()
 
     # query 2 - select "name" records from the "Artist" table
-    select_query = artist_table.select().with_only_columns([artist_table.c.Name])
+    # select_query = artist_table.select().with_only_columns([artist_table.c.Name])
+
+    # query 3 - select "Queen" "Name" from the "Artist" table
+    select_query = artist_table.select().where(artist_table.c.Name == "Queen")
 
     results = connection.execute(select_query)
     for result in results:
