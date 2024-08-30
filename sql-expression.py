@@ -25,7 +25,7 @@ album_table = Table (
 # create variable for "Track" table
 track_table = Table (
     "Track", meta,
-    Column("TrackID", Integer, primary_key=True),
+    Column("TrackId", Integer, primary_key=True),
     Column("Name", String),
     Column("AlbumId", Integer, ForeignKey("album_table.AlbumId")),
     Column("MediaTypeId", Integer, primary_key=False),
@@ -51,7 +51,11 @@ with db.connect() as connection:
     # select_query = artist_table.select().where(artist_table.c.ArtistId == 51)
 
     # query 5 - select "ArtistId" 51 from the "Album" table
-    select_query = album_table.select().where(album_table.c.ArtistId == 51)
+    # select_query = album_table.select().where(album_table.c.ArtistId == 51)
+
+    # query 6 - select all records where the composer is "Queen" from the "Tracks" table
+    select_query = track_table.select().where(track_table.c.Composer == "Queen")
+
 
 
 
