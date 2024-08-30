@@ -39,7 +39,10 @@ track_table = Table (
 # making the connection
 with db.connect() as connection:
     # query 1 - select all records from the "Artist" table
-    select_query = artist_table.select()
+    # select_query = artist_table.select()
+
+    # query 2 - select "name" records from the "Artist" table
+    select_query = artist_table.select().with_only_columns([artist_table.c.Name])
 
     results = connection.execute(select_query)
     for result in results:
