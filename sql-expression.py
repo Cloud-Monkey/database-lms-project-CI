@@ -16,7 +16,7 @@ artist_table = Table (
 
 # create variable for "Album" table
 album_table = Table (
-    "Name", meta,
+    "Album", meta,
     Column("AlbumId", Integer, primary_key=True),
     Column("Title", String),
     Column("ArtistId", Integer, ForeignKey("artist_table.ArtistId"))
@@ -45,7 +45,15 @@ with db.connect() as connection:
     # select_query = artist_table.select().with_only_columns([artist_table.c.Name])
 
     # query 3 - select "Queen" "Name" from the "Artist" table
-    select_query = artist_table.select().where(artist_table.c.Name == "Queen")
+    # select_query = artist_table.select().where(artist_table.c.Name == "Queen")
+
+    # query 4 - select "ArtistId" 51 from the "Artist" table
+    # select_query = artist_table.select().where(artist_table.c.ArtistId == 51)
+
+    # query 5 - select "ArtistId" 51 from the "Album" table
+    select_query = album_table.select().where(album_table.c.ArtistId == 51)
+
+
 
     results = connection.execute(select_query)
     for result in results:

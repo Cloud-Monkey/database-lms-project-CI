@@ -22,7 +22,7 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s ', [51])
 
 # query 6 - select all records where the composer is "Queen" from the "Tracks" table
-cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s ', ["Queen"])
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s ', ["Queen"])
 
 # query 7 - select all records where composer is buddy guy
 # cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s ', ["Buddy Guy"])
