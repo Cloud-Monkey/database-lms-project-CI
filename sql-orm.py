@@ -47,12 +47,14 @@ session = Session()
 base.metadata.create_all(db)
 
 # query 1 - select all records from the "Artist" table
-artists = session.query(Artist)
-for artist in artists:
-    print(artist.ArtistId, artist.Name, sep=" | ")
+# artists = session.query(Artist)
+# for artist in artists:
+#     print(artist.ArtistId, artist.Name, sep=" | ")
 
 # query 2 - select "name" records from the "Artist" table
-
+artists = session.query(Artist)
+for artist in artists:
+    print(artist.Name)
 
 # query 3 - select "Queen" "Name" from the "Artist" table
 
