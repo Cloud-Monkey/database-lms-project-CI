@@ -8,4 +8,23 @@ from sqlalchemy.orm import sessionmaker
 db = create_engine("postgresql:///chinook")
 base = declarative_base()
 
-#
+# create a class based model for the artist table
+class Artist(base):
+     __tablename__ = "Artist"
+     ArtistId = Column(Integer, primary_key=True)
+     Name = Column(String)
+
+# create a class based model for the album table
+
+
+# instead of connecting to the database directly, we will ask for a session
+# create a new instance of sessionmaker, then point to our engine (the db)
+Session = sessionmaker(db)
+
+# open an actual session by calling the session() subclass defined above
+session = Session()
+
+# creating the database using declarative_base subclass
+base.metadata.create_all(db)
+
+
