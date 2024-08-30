@@ -15,7 +15,11 @@ class Artist(base):
      Name = Column(String)
 
 # create a class based model for the album table
-
+class Album(base):
+    __tablename__ = "Album"
+    AlbumId = Column(Integer, primary_key=True)
+    Title = Column(String)
+    ArtistId = Column(Integer, ForeignKey("Artist.ArtistId"))
 
 # instead of connecting to the database directly, we will ask for a session
 # create a new instance of sessionmaker, then point to our engine (the db)
