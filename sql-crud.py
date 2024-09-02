@@ -97,11 +97,22 @@ session.add(tim_berners_lee)
 session.add(dave_brown)
 
 # update a single record
-programmer = session.query(Programmer).filter_by(id=7).first()
-programmer.famous_for = "Zero day exploits"
+# programmer = session.query(Programmer).filter_by(id=7).first()
+# programmer.famous_for = "Zero day exploits"
 
 # commit session to the database
-session.commit()
+# session.commit()
+
+# update multiple records
+people = session.query(Programmer)
+for person in people:
+        if person.gender == "F":
+            person.gender = "Female"
+        elif person.gender == "M":
+            person.gender = "Male"
+        else:
+            print("Gender not defined")
+        session.commit()
 
 # query database to find all Programmers
 programmers = session.query(Programmer)
