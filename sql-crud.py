@@ -96,12 +96,12 @@ session.add(bill_gates)
 session.add(tim_berners_lee)
 session.add(dave_brown)
 
-# commit session to the database
-# session.commit()
-
 # update a single record
 programmer = session.query(Programmer).filter_by(id=7).first()
-programmer.famous_for = "World president"
+programmer.famous_for = "World President"
+
+# commit session to the database
+session.commit()
 
 # query database to find all Programmers
 programmers = session.query(Programmer)
