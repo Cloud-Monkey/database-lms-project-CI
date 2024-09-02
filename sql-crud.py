@@ -79,6 +79,14 @@ tim_berners_lee = Programmer(
     famous_for="World Wide Web"
 )
 
+dave_brown = Programmer(
+    first_name="Dave",
+    last_name="Brown",
+    gender="M",
+    nationality="British",
+    famous_for="Hacking the planet"
+)
+
 # add each of our programmers to the session
 session.add(ada_lovelace)
 session.add(alan_turing)
@@ -86,6 +94,7 @@ session.add(grace_hopper)
 session.add(margaret_hamilton)
 session.add(bill_gates)
 session.add(tim_berners_lee)
+session.add(dave_brown)
 
 # commit session to the database
 session.commit()
