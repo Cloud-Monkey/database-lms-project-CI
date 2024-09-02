@@ -98,7 +98,7 @@ session.add(dave_brown)
 
 # update a single record
 programmer = session.query(Programmer).filter_by(id=7).first()
-programmer.famous_for = "World President"
+programmer.famous_for = "Zero day exploits"
 
 # commit session to the database
 session.commit()
