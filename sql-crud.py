@@ -39,3 +39,11 @@ ada_lovelace = Programmer(
     famous_for="First Programmer"
 )
 
+alan_turing = Programmer(
+    first_name="Alan",
+    last_name="Turing",
+    gender="M",
+    nationality="British",
+    famous_for="Modern Computing"
+)
+
