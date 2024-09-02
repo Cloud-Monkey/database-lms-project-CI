@@ -47,3 +47,11 @@ alan_turing = Programmer(
     famous_for="Modern Computing"
 )
 
+grace_hopper = Programmer(
+    first_name="Grace",
+    last_name="Hopper",
+    gender="F",
+    nationality="American",
+    famous_for="COBOL language"
+)
+
